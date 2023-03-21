@@ -99,7 +99,7 @@ class Page {
   //
   // Returns: true iff this page would show up before the other
   // page in sorted order. False otherwise.
-  // bool operator<(const Page& rhs);
+  bool operator<(const Page& rhs);
 
   // This function allows users to read various data types
   // from the page. Trying to read a non-primitive type or use
@@ -186,6 +186,11 @@ class Page {
 
   // Whether the page is dirty or not
   bool dirty_;
+
+
+//  bool operator==(const Page& other);
+
+    void copy_bytes(uint8_t *bytes, uint8_t *bytes1);
 };
 
 }

@@ -3,10 +3,14 @@
 
 #include <fstream>
 #include <cstdint>
+#include <unordered_map>
+#include <map>
 
 #include "./Page.h"
 
 using std::fstream;
+using std::unordered_map;
+using std::map;
 
 namespace simplevm {
 
@@ -149,6 +153,9 @@ class PageTable {
   size_t capacity_;
 
   // TODO: add fields
+  unordered_map<int, Page*> m;
+
+  int visitedTime;
 };
 
 }
